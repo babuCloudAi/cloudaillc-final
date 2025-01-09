@@ -32,6 +32,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
 		<!-- wow CSS Files -->
 		<link rel="preload" href="./assets/js/script.js" as="script" async />
 		<link rel="stylesheet" href="/assets/css/wheel.css" />
@@ -186,9 +187,7 @@
 									</span>
 									<div class="bot_des">
 										<h3 class="card-heading text-blue">Innovation</h3>
-										<p class="card-para text-black">
-											Connect with top IT talent to drive innovation, boost efficiency, and achieve goals with tailored staffing solutions.
-										</p>
+										<p class="card-para text-black">Connect with top IT talent to drive innovation, boost efficiency, and achieve goals with tailored staffing solutions.</p>
 									</div>
 								</div>
 
@@ -541,7 +540,6 @@
 				gsap.registerPlugin(ScrollToPlugin);
 
 				/* CARD ANIMATION */
-
 				const images = gsap.utils.toArray(".panel__card");
 				const endTime = 900 * images.length;
 
@@ -561,17 +559,13 @@
 						fastScrollEnd: true,
 						pin: true, // pin the trigger element while active
 						start: "50% 370px", // when the top of the trigger hits the top of the viewport
-						//end: () => `${window.innerHeight * 5} 10%`, // end after scrolling 500px beyond the start
-						end: `'+=${endTime}px'`,
+						end: () => `${window.innerHeight * 3} 10%`, // end after scrolling 500px beyond the start
+						// end: `'+=${endTime}px'`,
 						pinSpacing: true,
 						scrub: 0.2, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
 						markers: false,
 					},
 				});
-
-				/* FOR LARGE DEVICE */
-
-				// add animations and labels to the timeline
 
 				tl.to(".panel__card--one", { scale: 0.95, duration: 0.3, transformOrigin: "top" }, "b");
 

@@ -4115,6 +4115,9 @@ footer .form_container {
 
 .about-container .about_left_side {
 	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .about-container .about_left_side h1 {
@@ -4727,7 +4730,7 @@ footer .form_container {
 .contact-us {
 	position: relative;
 	width: 100%;
-	margin: 15vh auto 0;
+	margin: 5vh auto 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -4820,7 +4823,7 @@ footer .form_container {
 .contact-details .contact-data {
 	width: 100%;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	gap: 10px;
 }
 
@@ -4893,7 +4896,7 @@ footer .form_container {
 	font-size: 25px;
 	font-weight: 600;
 	width: 30%;
-	height: 75px;
+	/* height: 75px; */
 	/* align-items: center;
 	display: flex;
 	justify-content: center; */
@@ -5000,7 +5003,7 @@ footer .form_container {
 	}
 	.contact-form .input #country,
 	#state {
-		padding: 9px 15px;
+		padding:16px 15px;
 		font-size: 18px;
 	}
 
@@ -5075,11 +5078,23 @@ footer .form_container {
 		padding: 15px;
 		font-size: 18px;
 	}
+	.contact-cards .contact-card .contact-details{
+		width: 100%;
+	}
+	.get-in-touch .contact-cards .contact-card{
+		padding: 10px;
+	}
 }
 
 @media (max-width: 1024px) {
 	.contact-us .contact-bg .get-in-touch {
 		width: 90%;
+	}
+	.get-in-touch .contact-cards{
+		flex-wrap: wrap;
+	}
+	.get-in-touch .contact-cards .contact-card{
+		width: 50%;
 	}
 }
 
@@ -5116,7 +5131,16 @@ footer .form_container {
 	}
 
 	.contact-form button {
-		padding: 12px;
+		padding: 18px;
+		margin-top: 10px;
+		width: 100%;
+		border-radius: 15px;
+	}
+	.contact-us{
+		margin: 0px auto 0;
+	}
+	.get-in-touch p{
+		margin: 0;
 	}
 }
 
