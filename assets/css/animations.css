@@ -1,0 +1,143 @@
+.container {
+	max-width: 100rem;
+}
+
+.spacer-y {
+	padding: 7.5rem 0;
+}
+.text_section {
+	text-align: center;
+}
+.spacer-top {
+	padding-top: 7.5rem;
+}
+
+.spacer-bottom {
+	padding-bottom: 7.5rem;
+}
+
+.spacer-md {
+	padding: 3.75rem 0px;
+}
+
+html.lenis {
+	height: auto;
+}
+
+.lenis.lenis-smooth {
+	scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+	overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+	pointer-events: none;
+}
+
+/* PANELS */
+.panel_slide {
+	position: relative;
+	z-index: 9;
+}
+
+.panel__options {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	align-items: center;
+}
+
+.panel__options span {
+	font-size: 14px;
+}
+.panel__options span:first-child:hover {
+	color: #9a93f4;
+}
+.panel__options span:nth-child(2):hover {
+	color: #bce5f6;
+}
+.panel__options span:nth-child(3):hover {
+	color: #fcd1a6;
+}
+.panel__options span:last-child:hover {
+	color: #b5e5b8;
+}
+
+.panel__stack {
+	--spacer: 20px;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	align-items: center;
+	justify-items: center;
+	overflow-y: visible;
+}
+.panel__stack .panel__card {
+	grid-area: 1/1/2/2;
+	border-radius: 30px;
+	padding: 2.5rem;
+	position: absolute;
+	height: 35.625rem;
+	will-change: transform;
+}
+.panel__stack .panel__card:first-child {
+	top: calc(var(--spacer) * 1);
+	z-index: 1;
+}
+.panel__stack .panel__card:nth-child(2) {
+	top: calc(var(--spacer) * 2);
+	z-index: 2;
+}
+
+.panel__stack .panel__card:last-child {
+	top: calc(var(--spacer) * 3);
+	z-index: 3;
+}
+
+.panel__stack {
+	position: relative;
+	width: 100%;
+	margin: 3rem 0 5rem;
+	width: 100%;
+	padding: 10px;
+}
+
+.panel__stack .panel__card {
+	width: 100%;
+	/* background: var(--blue-slide); */
+	background-image: url("/assets/images/background/servicesbg.svg");
+	background-size: cover;
+	border-radius: 40px;
+	cursor: pointer;
+	padding: 1.5rem 1rem 0.75rem;
+	min-height: 470px;
+	margin: 0 0 50px;
+}
+
+.panel__stack .panel__card.hide {
+	visibility: hidden;
+}
+
+@media (max-width: 1024px) {
+	.panel__stack {
+		height: 50vh;
+	}
+}
+
+@media (max-width: 767px) {
+	.panel__stack {
+		height: auto;
+	}
+	.panel__stack .panel__card {
+		margin: 0;
+	}
+}

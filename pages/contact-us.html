@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head> 
+		<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>CloudAI Technologies</title>
+	<meta
+		name="description"
+		content="Cloud AI Technologies delivers innovative IT solutions to SLED organizations, leveraging our extensive in-house expertise. With a strong commitment to enhancing outcomes, we focus on driving progress within the communities we serve."
+	/>
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="/assets/css/styles.css" />
+	<link rel="stylesheet" href="/assets/css/about.css" />
+	<link rel="stylesheet" href="/assets/css/customStyles.css" />
+	<link rel="stylesheet" href="/assets/css/home.css" />
+	<link rel="stylesheet" href="/assets/css/navbar.css" />
+	<link rel="stylesheet" href="/assets/css/wheel.css" />
+	<link rel="stylesheet" href="/assets/css/common.css" />
+	<!-- favicon -->
+	<link rel="icon" href="/assets/images/favIcon/fav-icon.ico" type="image/x-icon" sizes="16x16" />
+
+	<!-- swiper -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?v=1.1" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js?v=1.1" defer></script>
+
+	<!-- slick -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+	</head>
+	<body>
+		<div class="main-section">
+			<!-- Placeholder for Navbar -->
+			<div id="navbar"></div>
+			<div class="main-section-container">
+			  <div class="container-left">
+				<h1 class="main-heading">Contact Us</h1>
+				<p class="main-para">We are deeply committed to delivering unparalleled service and unwavering support to ensure your experience exceeds expectations.</p>
+			</div>
+			<div class="container-image">
+				<img
+					loading="lazy"
+					alt="hero image"
+					src="/assets/images/banner/partners.svg"
+				/>
+			</div>
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<div class="contact_us_page">
+		
+			<div class="contact-us">
+				<div class="contact-bg">
+					<div class="get-in-touch">
+						<h3 class="section-heading">Get In Touch</h3>
+						<p class="section-para">We are deeply committed to delivering unparalleled service and unwavering support to ensure your experience exceeds expectations.</p>
+						<div class="contact-cards">
+							<div class="contact-card">
+								<div class="contact-details">
+									<h4 class="heading">Phone:</h4>
+									<div class="contact-data">
+										<div><img loading="lazy" src="/assets/images/icons/call.svg" alt="call" /></div>
+										<p class="card-para">+(202)503-2238</p>
+									</div>
+								</div>
+							</div>
+							<div class="contact-card">
+								<div class="contact-details">
+									<h4 class="heading">Email:</h4>
+									<div class="contact-data">
+										<div><img loading="lazy" src="/assets/images/icons/mail_dark.svg" alt="mail" /></div>
+										<p class="card-para">contact@cloudaillc.com</p>
+									</div>
+								</div>
+							</div>
+							<div class="contact-card">
+								<div class="contact-details">
+									<h4 class="heading">Address:</h4>
+									<div class="contact-data">
+										<div><img loading="lazy" src="/assets/images/icons/map_dark.svg" alt="map" /></div>
+										<p class="card-para">1200 G St NW, STE 800 Washington, DC 20005</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<form action="" class="contact-form">
+							<div class="names">
+								<div class="input">
+									<label for="">First Name<span class="text-red">*</span></label>
+									<input type="text" placeholder="First Name" id="firstName" />
+								</div>
+								<div class="input">
+									<label for="">Last Name<span class="text-red">*</span></label>
+									<input type="text" placeholder="Last Name" id="lastName" />
+								</div>
+							</div>
+							<div class="names">
+								<div class="input">
+									<label for="">Business Email<span class="text-red">*</span></label>
+									<input type="email" placeholder="Business Email" id="email" />
+								</div>
+								<div class="input">
+									<label for="">Organization’s Name<span class="text-red">*</span></label>
+									<input type="text" placeholder="Organization’s Name" id="organization" />
+								</div>
+							</div>
+							<div class="names">
+								<div class="input">
+									<label for="">Country<span class="text-red">*</span></label>
+									<select class="form-select country" aria-label="Default select example" onchange="loadStates()" id="country">
+										<option disabled selected>Select Country</option>
+									</select>
+								</div>
+								<div class="input">
+									<label for="">State<span class="text-red">*</span></label>
+									<select class="form-select state" aria-label="Default select example" id="state">
+										<option value="" disabled selected>Select State</option>
+									</select>
+								</div>
+							</div>
+
+							<button type="submit">Save</button>
+						</form>
+					</div>
+				</div>
+				<!-- Success Modal -->
+				<div id="successModal" class="modal">
+					<div class="modal-content">
+						<img loading="lazy" src="/assets/images/icons/success-icon.png" alt="" />
+						<h3 class="card-heading">Success</h3>
+						<p class="card-para">Your form has been submitted successfully!</p>
+						<button onclick="closeModal('successModal')">OK</button>
+					</div>
+				</div>
+
+				<!-- Failure Modal -->
+				<div id="failureModal" class="modal">
+					<div class="modal-content">
+						<img loading="lazy" src="/assets/images/icons/failure-icon.png" alt="" />
+						<h3 class="card-heading">Error</h3>
+						<p class="card-para">There was an error submitting the form. Please try again later.</p>
+						<button onclick="closeModal('failureModal')">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Placeholder for Footer -->
+		<div id="footer"></div>
+
+		<!-- script tag -->
+		<script src="../../assets/js/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,212 @@
+.main-heading {
+	font-size: 54px !important;
+	font-weight: 700 !important;
+	color: var(--blue);
+}
+.section-heading {
+	font-size: 50px !important;
+	font-weight: 700 !important;
+	color: var(--blue);
+}
+.card-heading{
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    color: var(--blue);
+}
+.nav-heading{
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    color: var(--blue);
+}
+.main-para{
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    color: var(--blue);
+}
+.section-para{
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    color: var(--blue);
+}
+.card-para{
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+}
+.para {
+	font-size: 16px !important;
+	font-weight: 400 !important;
+	line-height: 1.5;
+}
+.text-left {
+	text-align: left !important;
+}
+.text-right {
+	text-align: right !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.text-black {
+	color: #333 !important;
+}
+.text-blue {
+	color: var(--blue) !important;
+}
+.text-white {
+	color: var(--white) !important;
+}
+.main-section {
+	width: 100%;
+	height: 100vh;
+    background: linear-gradient(171deg, rgba(199, 229, 255, 0.06) 17.18%, rgba(255, 255, 255, 0.42) 17.2%, rgba(0, 136, 255, 0.14) 102.45%);
+}
+.main-section-container {
+	width: 90%;
+	height: 90vh;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.container-left {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+.container-image {
+	width: 40%;
+}
+.container-image img {
+	width: 100%;
+}
+
+@media (max-width: 1700px) {
+    .main-heading {
+        font-size: 50px !important;
+    }
+    .section-heading {
+        font-size: 45px !important;
+    }
+    .card-heading{
+        font-size: 24px !important;
+    }
+    .nav-heading{
+        font-size: 18px !important;
+    }
+    .main-para{
+        font-size: 22px !important;
+    }
+    .section-para{
+        font-size: 20px !important;
+    }
+    .card-para{
+        font-size: 18px !important;
+    }
+}
+@media (max-width: 1450px) {
+    .main-heading {
+        font-size: 45px !important;
+    }
+    .section-heading {
+        font-size: 40px !important;
+    }
+    .card-heading{
+        font-size: 22px !important;
+    }
+    .nav-heading{
+        font-size: 16px !important;
+    }
+    .main-para{
+        font-size: 20px !important;
+    }
+    .section-para{
+        font-size: 18px !important;
+    }
+    .card-para{
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 1050px) {
+    .main-heading {
+        font-size: 40px !important;
+        line-height: 1.5 !important;
+        text-align: center;
+    }
+    .section-heading {
+        font-size: 35px !important;
+    }
+    .card-heading{
+        font-size: 20px !important;
+    }
+    .main-para{
+        font-size: 20px !important;
+        text-align: center;
+    }
+    .section-para{
+        font-size: 18px !important;
+    }
+    .card-para{
+        font-size: 16px !important;
+    }
+    .main-section {
+        height: auto;
+    }
+    .main-section-container {
+        height: auto;
+        padding: 50px 0;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .container-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .container-image {
+        width: 70%;
+    }
+}
+@media (max-width: 600px) {
+    .main-heading {
+        font-size: 36px !important;
+        line-height: 1.5 !important;
+        text-align: center;
+    }
+    .section-heading {
+        font-size: 24px !important;
+    }
+    .card-heading{
+        font-size: 18px !important;
+    }
+    .main-para{
+        font-size: 18px !important;
+        text-align: center;
+    }
+    .section-para{
+        font-size: 16px !important;
+        /* text-align: center !important; */
+    }
+    .card-para{
+        font-size: 14px !important;
+    }
+    .main-section {
+        height: auto;
+    }
+    .main-section-container {
+        width: 95%;
+        padding: 30px 0;
+        gap: 30px;
+    }
+    .container-left {
+        gap: 20px;
+    }
+    .container-image {
+        width: 80%;
+    }
+}
