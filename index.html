@@ -46,10 +46,15 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 		<!-- slider -->
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+		<script src="/assets/js/particle.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 	</head>
 
 	<body>
+		
 		<div id="hero-section">
+			<div id="particles-js"></div>
 			<div id="navbar"></div>
 			<div class="about-container" id="home-page">
 				<div class="about_left_side">
@@ -74,7 +79,7 @@
 					<h2 class="fade-left">Innovating Your Future, Today</h2>
 					<p class="top_txt">Simplify Transitions, Enhance Efficiency, and Drive Sustainable Business Growth</p>
 				</div>
-				<div class="container">
+				<div class="slider-container">
 					<div class="row">
 						<div class="panel__stack">
 							<div class="panel__card panel__card--one text-white bg-purple overflow-hidden">
@@ -468,6 +473,12 @@
 
 		<!-- script tag -->
 		<script src="/assets/js/script.js"></script>
+		  <!-- Initialize Particles.js -->
+		  <script>
+			particlesJS.load('particles-js', '/assets/js/particles-config.json', function() {
+			  console.log('Particles.js loaded successfully.');
+			});
+		  </script>
 		<script>
 			$(document).ready(function () {
 				$(".slick-container").slick({
@@ -502,8 +513,11 @@
 				grabCursor: true,
 				freeMode: true,
 				mousewheel: true,
-				slidesPerView: 3.7,
+				slidesPerView: 4.7,
 				breakpoints: {
+					2400:{
+						slidesPerView: 4.7,
+					},
 					1700: {
 						slidesPerView: 3.7,
 					},
