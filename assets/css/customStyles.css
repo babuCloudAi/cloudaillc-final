@@ -157,9 +157,9 @@
 	align-items: center;
 	gap: 10px;
 	text-decoration: none;
-	color: #01236f;
+	/* color: #01236f; */
 	font-weight: 500;
-	font-size: 22px;
+	/* font-size: 22px; */
 	padding: 20px 30px;
 	border-radius: 8px;
 	background-color: #e2e3ec;
@@ -172,6 +172,8 @@
 
 .nav-item.active {
 	background-color: #01236f;
+}
+.nav-item.active h4{
 	color: #fff !important;
 }
 
@@ -189,8 +191,8 @@
 	width: 100%;
 	display: none;
 	gap: 20px;
-	flex-wrap: wrap;
 	justify-content: flex-start;
+	flex-direction: column;
 }
 .content.active {
 	display: flex;
@@ -200,16 +202,9 @@
 	font-size: 32px;
 	font-weight: 600;
 }
-.content p {
+.content p{
 	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	color: #333;
-	font-size: 26px;
-	font-weight: 400;
-	line-height: 40px;
 }
-
 .second_container {
 	width: 100%;
 	padding: 80px 100px;
@@ -255,10 +250,12 @@
 
 /* Modernization List */
 .modernization-list {
+	width: 100%;
 	list-style: none;
 	padding-left: 0;
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	gap: 10px;
 }
 
@@ -276,7 +273,11 @@
 	height: 40px;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1700px) {
+	.accordion_container{
+		width: 95%;
+		gap: 60px;
+	}
 	.second_container {
 		padding: 70px 80px;
 	}
@@ -291,6 +292,12 @@
 	.content-section .description {
 		font-size: 24px;
 	}
+	.navigation-panel {
+		width: 40%;
+	}
+	.acordian_content-section{
+		width: 60%;
+	}
 	.nav-item {
 		font-size: 20px;
 		padding: 20px 25px;
@@ -300,10 +307,6 @@
 	}
 	.content h1 {
 		font-size: 28px;
-	}
-	.content p {
-		font-size: 20px;
-		line-height: 30px;
 	}
 	.modernization-list li {
 		font-size: 20px;
@@ -338,9 +341,7 @@
 	.nav-item img {
 		width: 20px;
 	}
-	.navigation-panel {
-		width: 40%;
-	}
+	
 	.acordian_content-section {
 		width: 60%;
 	}
@@ -349,10 +350,6 @@
 	}
 	.content h1 {
 		font-size: 26px;
-	}
-	.content p {
-		font-size: 18px;
-		line-height: 30px;
 	}
 	.modernization-list li {
 		font-size: 18px;
@@ -420,11 +417,6 @@
 	}
 	.content h1 {
 		font-size: 24px;
-		text-align: center;
-	}
-	.content p {
-		font-size: 16px;
-		line-height: 25px;
 		text-align: center;
 	}
 	.modernization-list li {

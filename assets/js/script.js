@@ -278,9 +278,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Api Integration for Contact Us Page
-document.querySelector(".contact-form").addEventListener("submit", async (e) => {
-	e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.querySelector(".contact-form");
 
+    if (contactForm) {
+        // Attach event listener only if the form exists
+        contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
 	const firstName = document.getElementById("firstName").value.trim();
 	const lastName = document.getElementById("lastName").value.trim();
 	const email = document.getElementById("email").value.trim();
@@ -310,6 +314,7 @@ document.querySelector(".contact-form").addEventListener("submit", async (e) => 
 		organization: document.getElementById("organization").value.trim(),
 		country: document.getElementById("country").value,
 		state: document.getElementById("state").value,
+		yourMessage:document.getElementById("message").value
 	};
 
 	try {
@@ -334,7 +339,10 @@ document.querySelector(".contact-form").addEventListener("submit", async (e) => 
 		openModal("failureModal");
 	}
 });
-
+} else {
+	console.warn("Contact form (.contact-form) not found on this page.");
+}
+});
 function openModal(modalId) {
 	document.getElementById(modalId).style.display = "flex";
 	window.scrollTo(0, 0);
@@ -396,3 +404,86 @@ function loadStates() {
 	stateSelect.style.pointerEvents = "auto";
 }
 window.onload = loadCountries;
+
+
+// Api Integration for Career Form
+// Ensure DOM is loaded before running the script
+document.addEventListener("DOMContentLoaded", () => {
+    const applicationForm = document.querySelector("#application-form");
+
+    if (applicationForm) {
+        // Attach event listener only if the form exists
+        applicationForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const firstName = document.getElementById("first-name").value.trim();
+            const lastName = document.getElementById("last-name").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            const namePattern = /^[A-Za-z]+$/;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!namePattern.test(firstName)) {
+                alert("First Name must contain only alphabets.");
+                return;
+            }
+
+            if (!namePattern.test(lastName)) {
+                alert("Last Name must contain only alphabets.");
+                return;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            const formData = {
+                firstName,
+                lastName,
+                email,
+                appliedFor: document.getElementById("apply-for").value,
+                phoneNumber: document.getElementById("phone").value.trim(),
+                experience: document.getElementById("experience").value.trim(),
+                location: document.getElementById("location").value.trim(),
+                message: document.getElementById("message").value,
+            };
+
+            try {
+                const response = await fetch(
+                    "https://6lshxy5k3f.execute-api.us-east-1.amazonaws.com/v1/user-resumes",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(formData),
+                    }
+                );
+
+                if (response.ok) {
+                    openModal("successModal");
+                    applicationForm.reset();
+                    console.log("Success");
+                } else {
+                    openModal("failureModal");
+                    console.log("Failed");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                openModal("failureModal");
+            }
+        });
+    } else {
+        console.warn("Career form (#application-form) not found on this page.");
+    }
+});
+
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "flex";
+    window.scrollTo(0, 0);
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}

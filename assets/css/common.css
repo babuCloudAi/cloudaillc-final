@@ -13,6 +13,11 @@
     font-weight: 600 !important;
     color: var(--blue);
 }
+.accordian-heading{
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    color: var(--blue);
+}
 .nav-heading{
     font-size: 20px !important;
     font-weight: 500 !important;
@@ -99,6 +104,9 @@
     .card-heading{
         font-size: 24px !important;
     }
+    .accordian-heading{
+        font-size: 20px !important;
+    }
     .nav-heading{
         font-size: 18px !important;
     }
@@ -121,6 +129,9 @@
     }
     .card-heading{
         font-size: 22px !important;
+    }
+    .accordian-heading{
+        font-size: 18px !important;
     }
     .nav-heading{
         font-size: 16px !important;
@@ -186,6 +197,9 @@
     }
     .card-heading{
         font-size: 18px !important;
+    }
+    .accordian-heading{
+        font-size: 16px !important;
     }
     .main-para{
         font-size: 18px !important;

@@ -390,20 +390,20 @@ main .splide__pagination__page.is-active {
 	font-weight: 600;
 }
 .benefits_details_cont ul li .left_description p {
-	font-size: 1rem;
-	line-height: 1.5rem;
-	color: #00256a;
-	font-weight: 500;
-	margin: 0.5rem 0 1rem;
-	font-family: var(--Raleway);
-	/* min-height: 50px; */
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-line-clamp: 4; /* number of lines to show */
-	line-clamp: 6;
 	-webkit-box-orient: vertical;
+	transition: all 0.5s ease-in-out;
 }
+.benefits_details_cont ul li:hover .left_description p {
+	overflow: visible;
+	text-overflow: unset;
+	-webkit-line-clamp: unset; /* Remove line clamping */
+	display: block; /* Make it fully visible */
+	white-space: normal; /* Ensure text wraps properly */
+  }
 .benefits_details_cont ul li .icons_side {
 	width: 30%;
 }
@@ -412,7 +412,7 @@ main .splide__pagination__page.is-active {
 	width: 100%;
 }
 .benefits_details_cont ul li:first-child .left_description {
-	width: 50%;
+	width: 60%;
 	align-content: flex-start;
 }
 /*  */
