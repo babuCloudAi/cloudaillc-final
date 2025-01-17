@@ -4899,7 +4899,9 @@ footer .form_container {
   text-align: left;
   width: 100%;
 }
-
+.contact-details .contact-data p a:hover , .contact-details .contact-data p a:visited {
+color: #333;
+}
 .contact-form {
   width: 100%;
   border-radius: 19px;
